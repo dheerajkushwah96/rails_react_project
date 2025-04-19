@@ -6,6 +6,7 @@ export default (
   <Router>
     <Routes>
       <Route path="/" element={<PostList />} />
+      <Route path="/posts" element={<PostList />} />
     </Routes>
   </Router>
 );
