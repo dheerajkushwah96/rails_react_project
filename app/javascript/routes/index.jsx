@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PostList from "../components/PostList";
+import Posts from "../components/posts";
 
 export default (
   <Router>
     <Routes>
-      <Route path="/" element={<PostList />} />
-      <Route path="/posts" element={<PostList />} />
+      <Route path="/" element={<Posts />} />
+      <Route path="/posts" element={<Posts />} />
     </Routes>
   </Router>
 );

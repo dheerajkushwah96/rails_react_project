@@ -10,7 +10,7 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 
 // Type for a single post
-type Post = {
+type PostProps = {
   id: number;
   title: string;
   body: string;
@@ -19,7 +19,7 @@ type Post = {
 
 // Type for column definitions
 type Column = {
-  id: keyof Post | "actions";
+  id: keyof PostProps | "actions";
   label: string;
   align?: "right" | "left" | "center";
   minWidth?: number;
@@ -33,14 +33,14 @@ const columns: Column[] = [
   { id: "actions", label: "Actions" },
 ];
 
-function PostList() {
-  const [posts, setPosts] = useState<Post[]>([]);
+function Posts() {
+  const [posts, setPosts] = useState<PostProps[]>([]);
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState<number>(10);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get<Post[]>(
+      const response = await axios.get<PostProps[]>(
         "http://localhost:3000/posts.json"
       );
       setPosts(response.data);
@@ -107,4 +107,4 @@ function PostList() {
   );
 }
 
-export default PostList;
+export default Posts;

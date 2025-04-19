@@ -4,7 +4,7 @@
   "devDependencies": {
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "esbuild": "^0.24.0",
+    "esbuild": "^0.25.2",
     "typescript": "^5.8.3"
   },
   "scripts": {
@@ -15,15 +15,17 @@
     "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
   },
   "dependencies": {
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.12",
-    "@mui/material": "^6.1.8",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
     "@popperjs/core": "^2.11.8",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
     "nodemon": "^3.1.7",
+    "or": "^0.2.0",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
     "react": "^18.3.1",
