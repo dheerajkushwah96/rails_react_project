@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
+    <div class="card-body">
+      <h2 class="card-title mb-4 text-center">Resend confirmation instructions</h2>
+
+      <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="mb-3">
+          <%= f.label :email, class: "form-label" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: "form-control", required: true %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.submit "Resend confirmation instructions", class: "btn btn-primary w-100" %>
+        </div>
+      <% end %>
+
+      <div class="text-center mt-3">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>
