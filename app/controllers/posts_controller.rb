@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  layout "application-react"
 
   # GET /posts or /posts.json
   def index
