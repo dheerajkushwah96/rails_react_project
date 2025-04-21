@@ -2,7 +2,11 @@ import React from "react";
 import Container from "@mui/material/Container";
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import Header from "./header";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { OVERRIDES } from "../theme/constants";
+
+// Create a dark theme instance.
+const theme = createTheme(OVERRIDES);
 
 document.addEventListener("turbo:load", () => {
   const mountNode = document.getElementById("rails-react-app");
@@ -10,12 +14,11 @@ document.addEventListener("turbo:load", () => {
   if (mountNode) {
     const root = createRoot(mountNode);
     root.render(
-      <>
-        <Header />
+      <ThemeProvider theme={theme}>
         <Container sx={{ mt: 4, mb: 4 }}>
           <App />
         </Container>
-      </>
+      </ThemeProvider>
     );
   }
 });
