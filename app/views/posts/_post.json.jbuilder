@@ -1,2 +1,3 @@
-json.extract! post, :id, :title, :body, :created_at, :updated_at
-json.url post_url(post, format: :json)
+json.extract! post, :id, :title, :body
+json.created_at post.created_at.strftime('%d %b, %y at %I:%M %p')
+json.url post_url(post)

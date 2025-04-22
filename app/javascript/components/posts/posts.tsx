@@ -8,14 +8,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
-
-// Type for a single post
-type PostProps = {
-  id: number;
-  title: string;
-  body: string;
-  created_at: string;
-};
+import { Button } from "@mui/material";
+import {RemoveRedEyeOutlined} from '@mui/icons-material';
+import { PostProps } from "../types/post";
 
 // Type for column definitions
 type Column = {
@@ -88,7 +83,16 @@ function Posts() {
                   <TableCell>{row.title}</TableCell>
                   <TableCell>{row.body}</TableCell>
                   <TableCell>{row.created_at}</TableCell>
-                  <TableCell>{/* Actions here */}</TableCell>
+                  <TableCell>
+                    <Button
+                      variant="outlined"
+                      href={row.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <RemoveRedEyeOutlined fontSize="small"/>
+                    </Button>
+                  </TableCell>
                 </TableRow>
               ))}
           </TableBody>
