@@ -10,15 +10,7 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { Button } from "@mui/material";
 import {RemoveRedEyeOutlined} from '@mui/icons-material';
-
-// Type for a single post
-type PostProps = {
-  id: number;
-  title: string;
-  body: string;
-  created_at: string;
-  url: string;
-};
+import { PostProps } from "../types/post";
 
 // Type for column definitions
 type Column = {
