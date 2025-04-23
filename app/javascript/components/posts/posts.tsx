@@ -87,7 +87,6 @@ function Posts() {
                     <Button
                       variant="outlined"
                       href={row.url}
-                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       <RemoveRedEyeOutlined fontSize="small"/>
