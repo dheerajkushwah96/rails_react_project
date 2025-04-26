@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "@mui/material/Container";
 import { createRoot } from "react-dom/client";
 import App from "./App";

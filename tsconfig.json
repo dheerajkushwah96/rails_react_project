@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                                // Set the output to modern JavaScript
+    "module": "ESNext",                                // Use ES modules
+    "moduleResolution": "bundler",                     // Use Vite's bundler for resolving modules
+    "strict": true,                                    // Enable all strict type-checking options
+    "esModuleInterop": true,                           // Allow default imports from non-ESM modules
+    "skipLibCheck": true,                              // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true,          // Ensure consistent file name casing
+    "resolveJsonModule": true,                         // Allow importing JSON files as modules
+    "jsx": "react-jsx",             // Optional, can be omitted with `react-jsx`
+    "baseUrl": ".",                                    // Set the base directory for module resolution
+    "paths": {
+      "~/*": ["./app/javascript/*"]                               // Define custom path aliases for your source code
+    },
+    "types": ["vite/client", "node"]                   // Types for Vite and Node.js
+  },
+  "include": [
+    "./app/javascript/"                                     // Include all files and subdirectories in the source code folder
+  ],
+  "exclude": [
+    "node_modules",                                    // Exclude node_modules
+    "public"                                           // Exclude static files (if any)
+  ]
+}
